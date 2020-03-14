@@ -6,7 +6,8 @@ with open('Words.txt', 'r') as f:
 
 
 inWord = rd.randint(0, (len(words) - 1))
-drawnWord = words[inWord]
+drawnWord = words[inWord].replace('\n', '')
+print(drawnWord)
 
 
 
