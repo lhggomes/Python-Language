@@ -1,7 +1,7 @@
 def fibonnaci(n):
     if n == 1 or n == 2:
         return 1
-    return fibonnaci(n-1) + fibonnaci(n-2)
+    return fibonnaci(n - 1) + fibonnaci(n - 2)
 
 
 def fastFibonnaci(n):
@@ -17,7 +17,8 @@ def fastFibonnaci(n):
         f1 = f
     return f1
 
+
 print("Fastly Calculation of Fibonnaci (For Method)")
-print(fastFibonnaci(32))
+print(fastFibonnaci(50))
 print('Slowly Calculation of Fibonnaci (Recursion)')
-print(fibonnaci(32))
+print(fibonnaci(50))
