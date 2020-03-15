@@ -6,6 +6,6 @@ def registEmployer (name, age, prof = "Unknow"):
 '''
 The paramters who are not obligatory, must have to be declareted after the obligatory 
 '''
-registEmployer("Marcos" , 19)
+registEmployer("Marcos", 19)
 
 
