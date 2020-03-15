@@ -11,7 +11,7 @@ class Person:
         self.name = name
 
     def toString(self):
-        return Person
+        return toSring
 
 
 
