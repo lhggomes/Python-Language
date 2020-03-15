@@ -6,12 +6,14 @@ coins = [
     1
 ]
 total = 0
-change = 75
+change = 130
+
 
 for i in range(len(coins)):
     numCoins = change // coins[i]
     change -= numCoins * coins[i]
     total += numCoins
+
 
 print(total)
 
