@@ -19,6 +19,6 @@ def fastFibonnaci(n):
 
 
 print("Fastly Calculation of Fibonnaci (For Method)")
-print(fastFibonnaci(50))
+print(fastFibonnaci(10))
 print('Slowly Calculation of Fibonnaci (Recursion)')
-print(fibonnaci(50))
+print(fibonnaci(10))
