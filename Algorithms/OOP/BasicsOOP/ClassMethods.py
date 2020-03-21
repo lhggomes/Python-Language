@@ -16,6 +16,9 @@ class Employee:
     def apply_raise(self):
         self.pay = int(self.pay * self.raise_amount)
 
+    @classmethod
+    def set_raise_amt(cls, amount):
+        cls.raise_amount = amount
 
 emp1 = Employee('Corey', 'Schafar', 5000)
 emp2 = Employee('Lucas', 'Gomes', 4560)
