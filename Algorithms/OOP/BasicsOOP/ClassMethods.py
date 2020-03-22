@@ -1,3 +1,6 @@
+import datetime
+
+
 class Employee:
     raise_amount = 1.04
     num_emplo = 0
@@ -23,12 +26,21 @@ class Employee:
     @classmethod
     def from_str(cls, emp_str):
         first, last, pay = emp_str.split('-')
-        return cls(first,last,pay)
+        return cls(first, last, pay)
+
+    @staticmethod
+    def is_workday(day):
+        if day.weekday() == 5 or day.weekday() == 6:
+            return False
+        return True
 
 
+date = datetime.time(2016, 7, 10)
 
 Employee.set_raise_amt(1.05)
 
 emp = 'Jhon-Doe-7000'
 new_Emp = Employee.from_str(emp)
 print(new_Emp)
+
+print(Employee.is_workday(date))
