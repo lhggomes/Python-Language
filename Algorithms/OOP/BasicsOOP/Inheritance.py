@@ -32,6 +32,17 @@ class Manager(Employee):
         else:
             self.employees = employees
 
+    def add_emp(self, emp):
+        if emp not in self.employees:
+            self.employees.append(emp)
+
+    def remove_emp(self, emp):
+        if emp in self.employees:
+            self.employees.remove(emp)
+
+    def print_emps(self):
+        for emp in self.employees:
+            print('-->', emp.fullname())
 
 dev_1 = Developer('Lucas', 'Gomes', 9000, 'Python')
 print(dev_1.email)
