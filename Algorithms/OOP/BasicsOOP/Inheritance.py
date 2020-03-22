@@ -44,6 +44,14 @@ class Manager(Employee):
         for emp in self.employees:
             print('-->', emp.fullname())
 
+
 dev_1 = Developer('Lucas', 'Gomes', 9000, 'Python')
+dev_2 = Developer('Matheys', 'Dutra', 9000, 'PHP')
 print(dev_1.email)
 print(dev_1.pro_lang)
+
+mgr_1 = Manager('Fernando', 'Smith', 1983, [dev_1])
+print(mgr_1.email)
+
+mgr_1.add_emp(dev_2)
+mgr_1.print_emps()
