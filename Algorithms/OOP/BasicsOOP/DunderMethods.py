@@ -28,6 +28,6 @@ ep2 = Employee('Atillyo', 'Ramos', 4557)
 # Using DunderMethods
 print(int.__add__(1, 2))
 print(str.__add__('a', 'b'))
-
+#Using the function who has changed
 print(ep1 + ep2)
 
