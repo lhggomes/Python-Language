@@ -16,8 +16,7 @@ class Employee:
 
         self.num_emplo += 1
 
-    def fullname(self):
-        return '{} {}'.format(self.first, self.last)
+#Using DunderMethods
 
-    def apply_raise(self):
-        self.pay = int(self.pay * self.raise_amount)
+print(int.__add__(1,2))
+print(str.__add__('a', 'b'))
