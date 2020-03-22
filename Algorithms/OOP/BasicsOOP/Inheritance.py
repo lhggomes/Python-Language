@@ -24,6 +24,15 @@ class Developer(Employee):
     pass
 
 
+class Manager(Employee):
+    def __init__(self, firstName, lastName, pay, employees: None):
+        super().__init__(firstName, lastName, pay)
+        if employees is None:
+            self.employees = []
+        else:
+            self.employees = employees
+
+
 dev_1 = Developer('Lucas', 'Gomes', 9000, 'Python')
 print(dev_1.email)
 print(dev_1.pro_lang)
