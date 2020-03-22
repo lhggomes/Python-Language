@@ -7,8 +7,6 @@ class Employee:
         self.pay = pay
         self.email = firstName + '.' + lastName + "@aperam.com"
 
-
-
     def fullname(self):
         return '{} {}'.format(self.first, self.last)
 
@@ -17,8 +15,15 @@ class Employee:
 
 
 class Developer(Employee):
+    raise_amount = 1.10
+
+    def __init__(self, firstName, lastName, pay, prog_lang):
+        super().__init__(firstName, lastName, pay)
+        self.pro_lang = prog_lang
+
     pass
 
 
-dev_1 = Developer('Lucas', 'Gomes', 9000)
+dev_1 = Developer('Lucas', 'Gomes', 9000, 'Python')
 print(dev_1.email)
+print(dev_1.pro_lang)
