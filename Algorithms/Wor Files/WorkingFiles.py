@@ -19,5 +19,10 @@ with open('test.txt', 'r') as f:
     f_contents = f.read(szread)
     print(f_contents)
 
-    while len(f_contents) > 0:
-        print(f_contents, end='')
+    # while len(f_contents) > 0:
+    #     print(f_contents, end='')
+
+
+#Reading on a File
+with open('test2.txt', 'w') as f:
+    f.write('Test')
