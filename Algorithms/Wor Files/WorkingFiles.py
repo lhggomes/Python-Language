@@ -7,5 +7,10 @@ f.close()
 with open('test.txt', 'r') as f:
     for line in f:
         print(line, end='')
-# f_contents = f.readline()
-# print(f_contents)
+
+# Determing a size
+with open('test.txt', 'r') as f:
+    szread = 10
+    f_contents = f.read(szread)
+    while len(f_contents) > 0:
+        print(f_contents, end='')
