@@ -16,3 +16,16 @@ class Employee:
     @fullname.setter
     def fullname(self,name):
         first, last = name.slipt(' ')
+        self.first = first
+        self.last = last
+
+    @fullname.deleter
+    def fullname(self):
+        print('Delete Name!')
+        self.first = None
+        self.last = None
+
+
+
+emp1 = Employee('Lucas', 'Gomes', 4566)
+emp1.fullname = 'Lucas Silva'
