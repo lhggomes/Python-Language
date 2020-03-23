@@ -26,3 +26,10 @@ with open('test.txt', 'r') as f:
 #Reading on a File
 with open('test2.txt', 'w') as f:
     f.write('Test')
+
+#Copying data from one file to antoher
+
+with open('test.txt', 'r') as rf:
+    with open('test-Copry.txt', 'w') as wf:
+        for line in rf:
+            wf.write(line)
