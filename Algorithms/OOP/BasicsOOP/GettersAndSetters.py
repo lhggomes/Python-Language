@@ -5,10 +5,14 @@ class Employee:
         self.first = firstName
         self.last = lastName
         self.pay = pay
-        self.email = firstName + '.' + lastName + "@aperam.com"
 
+    @property
+    def email(self):
+        return '{}.{}@aperam.com'.format(self.first,self.last)
+    @property
     def fullname(self):
         return '{} {}'.format(self.first, self.last)
 
-    def apply_raise(self):
-        self.pay = int(self.pay * self.raise_amount)
+    @fullname.setter
+    def fullname(self,name):
+        first, last = name.slipt(' ')
