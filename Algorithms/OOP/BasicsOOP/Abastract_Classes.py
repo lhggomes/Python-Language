@@ -1,11 +1,21 @@
 #Here we'll use the abc module (Abstract Base Classes)
 import abc
 
-class Funcionario(abc.ABC):
+class Pessoa(abc.ABC):
 
    @abc.abstractmethod
    def get_bonificacao(self):
        pass
 
-if __name__ == '__main__':
-    f = Funcionario()
+
+
+class Conta(abc.ABC):
+    def __init__(self, numero, titular, saldo=0, limite=1000.0):
+        self._numero = numero
+        self._titular = titular
+        self._saldo = saldo
+        self._limite = limite
+
+    @abc.abstractmethod
+    def atualiza(self):
+        pass
