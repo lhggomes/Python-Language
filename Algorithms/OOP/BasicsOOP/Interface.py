@@ -1,6 +1,5 @@
 import abc
 
-
 class Controlador(abc.ABC):
     @abc.abstractmethod
     def ligar(self):
@@ -25,3 +24,5 @@ class Controlador(abc.ABC):
     @abc.abstractmethod
     def menos_volume(self):
         pass
+
+
