@@ -53,9 +53,14 @@ print(dev_1.pro_lang)
 mgr_1 = Manager('Fernando', 'Smith', 1983, [dev_1])
 print(mgr_1.email)
 
+
+
 mgr_1.add_emp(dev_2)
 
 mgr_1.print_emps()
 
+print(dev_1.__dict__());
+
 print(isinstance(mgr_1, Developer))
 
+print(dev_1.__slots__());
