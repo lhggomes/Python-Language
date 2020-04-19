@@ -1,6 +1,7 @@
 import pymysql
 
 
+
 class connection():
     def __init__(self, host='localhost', user='root', password='', data_base='', port='3306', charset='utf8mb4'):
         self._host = host
@@ -10,13 +11,18 @@ class connection():
         self._port = port
         self._charset = charset
 
+    @property
     def create_connection(self):
-        con = pymysql.connect(
-            self._host,
-            self._password,
-            self._data_base,
-            self._port,
-            self._charset
-        )
+        try:
+            con = pymysql.connect(
+                self._host,
+                self._password,
+                self._data_base,
+                self._port,
+                self._charset )
 
-        return con
+        except pymysql.connections.err:
+            print('Erro não foi possível Connectar')
+
+        finally:
+            return con
