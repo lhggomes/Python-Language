@@ -1,4 +1,5 @@
 from Algorithms.CRUD import DBConnection
 
 connect = DBConnection.connection()
-connect.create_connection
+
+con = connect.create_connection()

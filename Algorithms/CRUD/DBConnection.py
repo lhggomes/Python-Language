@@ -11,8 +11,6 @@ class connection:
         self._port = port
         self._charset = charset
 
-    @property
-    def create_connection(self):
         global con
         try:
             con = pymysql.connect(
@@ -25,11 +23,11 @@ class connection:
         except:
             print('Erro não foi possível Connectar', sys.exc_info()[0])
 
-        finally:
-            return con
+
 
     def is_connect(self):
-        if self.create_connection() is not None:
+        global con
+        if self.con is not None:
             return True
         else:
             return False
