@@ -1,4 +1,5 @@
 import pymysql
+import sys
 
 
 
@@ -13,6 +14,7 @@ class connection():
 
     @property
     def create_connection(self):
+        global con
         try:
             con = pymysql.connect(
                 self._host,
@@ -21,8 +23,15 @@ class connection():
                 self._port,
                 self._charset )
 
-        except pymysql.connections.err:
-            print('Erro não foi possível Connectar')
+
+        except:
+            print('Erro não foi possível Connectar', sys.exc_info()[0])
 
         finally:
             return con
+
+    def isConnect(self):
+        if (self.create_connection() != None):
+            return True
+        else:
+            return False
