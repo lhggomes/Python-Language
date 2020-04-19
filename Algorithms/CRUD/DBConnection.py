@@ -3,29 +3,39 @@ import sys
 
 
 class connection :
-    def __init__(self, host='localhost', user='root', password='', data_base='', port='3306', charset='utf8mb4') :
+    def __init__(self, host="localhost", user="root", password="", data_base="", port=3306) :
         self._host = host
         self._user = user
         self._password = password
         self._data_base = data_base
         self._port = port
-        self._charset = charset
+
 
         global con
+        global status
+
         try :
             con = pymysql.connect(
                 self._host,
+                self._user,
                 self._password,
                 self._data_base,
-                self._port,
-                self._charset)
-
+                self._port
+                )
+            status = True
         except :
             print('Erro não foi possível Connectar', sys.exc_info()[0])
+            status = False
 
     def is_connect(self) :
-        global con
-        if self.con is not None :
+        global status
+        if status:
             return True
-        else :
+        else:
             return False
+
+    def create_cursor(self):
+        global cursor
+        cursor = con.cursor()
+        return cursor
+
