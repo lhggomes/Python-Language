@@ -22,7 +22,7 @@ def create_connection(host="localhost", user="root", password="", data_base="", 
     return con
 
 
-def is_connect(self) :
+def is_connect():
     global status
     if status:
         return True
