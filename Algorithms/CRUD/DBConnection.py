@@ -10,11 +10,11 @@ class connection :
         self._data_base = data_base
         self._port = port
 
-
+    def create_connection(self) :
         global con
         global status
 
-        try :
+        try:
             con = pymysql.connect(
                 self._host,
                 self._user,
@@ -23,19 +23,17 @@ class connection :
                 self._port
                 )
             status = True
-        except :
+        except:
             print('Erro não foi possível Connectar', sys.exc_info()[0])
             status = False
 
+        return con
+
     def is_connect(self) :
         global status
-        if status:
+        if status :
             return True
-        else:
+        else :
             return False
 
-    def create_cursor(self):
-        global cursor
-        cursor = con.cursor()
-        return cursor
 
