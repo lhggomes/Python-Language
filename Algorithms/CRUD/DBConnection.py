@@ -14,17 +14,14 @@ def create_connection(host="localhost", user="root", password="", data_base="", 
             data_base,
             port
             )
-        status = True
+        is_connect(True)
     except:
         print('Erro não foi possível Connectar', sys.exc_info()[0])
-        status = False
+        is_connect(False)
 
     return con
 
 
-def is_connect():
-    global status
-    if status:
-        return True
-    else:
-        return False
+def is_connect(status):
+    return status
+
