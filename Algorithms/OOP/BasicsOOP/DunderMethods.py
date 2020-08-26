@@ -13,7 +13,7 @@ class Employee:
         self.first = firstName
         self.last = lastName
         self.pay = pay
-        self.email = firstName + '.' + lastName + "@aperam.com"
+        self.email = firstName + '.' + lastName + "@gmail.com"
 
         self.num_emplo += 1
 
